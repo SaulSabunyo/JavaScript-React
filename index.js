@@ -34,3 +34,21 @@ let btn = document.querySelector('button')
 btn.addEventListener('click', function(){
     bodyElement.style.backgroundColor = "blue"
 })
+
+//Accesssing the h2 element
+let heading2 = document.querySelector('h2')
+headingstyle = {
+    color: "red",
+    fontSize: "70px",
+    textAlign: "Center"
+}
+//Object.assign(heading2.style, headingstyle)// using object.assign to assign multiple styles to an element
+//assigning using a for in loop
+for(let key in headingstyle){    
+    heading2.style[key] = headingstyle[key]
+}
+
+let button2 = document.querySelector('#btn2')
+// button2.addEventListener('click', function(){
+//     heading2.style.color = "green"
+// })
