@@ -1,5 +1,7 @@
-//Getting h1 element
+//Getting the element
 let heading = document.querySelector('h1')
+let heading3 = document.querySelector('h3')
+let myDiv = document.querySelector('#mydiv')
 //changing the value of the heading element.
 heading.innerText = "This time round serious business only."
 //Changing the style of the element
@@ -49,6 +51,26 @@ for(let key in headingstyle){
 }
 
 let button2 = document.querySelector('#btn2')
-// button2.addEventListener('click', function(){
-//     heading2.style.color = "green"
-// })
+button2.addEventListener('click', function(){
+    heading2.style.color = "green"
+   heading2.style.fontSize = "100px"}
+)
+//Adding styling to the heading three using a for in loop
+for(let key in headingstyle){
+    heading3.style[key] = headingstyle[key]
+}
+//Adding a event and it's event listener to the Heading3
+heading3.addEventListener('mouseover', function(){
+    heading3.style.backgroundColor ='orange'
+})
+//Adding an event listener to cater for mouse out
+//heading3.addEventListener('mouseout', function(){
+//    headingstyle.style.backkgroundcolor = "white"
+//})
+
+//Creating an event listener to change the background of an element with colors being picked from an array randomly
+myDiv.addEventListener('click', function(){
+    let colors = ['red','blue','green','orange','yellow','indigo','vomiting']
+    let randomindex = Math.floor(Math.random()*colors.length)
+    myDiv.style.backgroundColor =colors[randomindex]
+})
