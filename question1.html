@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Question -->
+     <!-- Create a page on which users can use dropdown menus to change the font size, color, and font family of a text block. -->
+    <h2>Change the fontsize, color and font family of the Textblock below</h2>
+    <label for="fontsize">Font Size:</label>
+    <select id="fontsize" onchange="changeStyle()">
+        <option value="16px">16px</option>
+        <option value="20px">20px</option>
+        <option value="24px">24px</option>
+        <option value="28px">28px</option> 
+    </select>
+    <label for="fontcolor">Font Color:</label>
+    <select id="fontcolor" onchange="changeStyle()">
+        <option value="black">Black</option>
+        <option value="red">Red</option>
+        <option value="blue">Blue</option>
+        <option value="green">Green</option>
+    </select>
+    <label for="fontfamily">Font Family:</label>
+    <select id="fontfamily" onchange="changeStyle()">
+        <option value="Arial">Arial</option>
+        <option value="Courier New">Courier New</option>
+        <option value="Georgia">Georgia</option>
+        <option value="Times New Roman">Times New Roman</option>
+    </select>
+    <div id="textblock" style="margin-top:20px; border:1px solid black; padding:10px;">
+        This is a sample text block. Change my style using the dropdown menus above!
+    </div>
+    <script>
+        function changeStyle() {
+            const textBlock = document.getElementById('textblock');
+            const fontSize = document.getElementById('fontsize').value;
+            const fontColor = document.getElementById('fontcolor').value;
+            const fontFamily = document.getElementById('fontfamily').value;
+
+            textBlock.style.fontSize = fontSize;
+            textBlock.style.color = fontColor;
+            textBlock.style.fontFamily = fontFamily;
+        }
+    </script>                   
+    
+</body>
+</html>
